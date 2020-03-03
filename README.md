@@ -7,7 +7,7 @@ Use the package manager [npm](https://www.npmjs.com/get-npm) to be able to run t
 #### Than run these commands to be able to run the program
 ```bash
 npm install react-native
-npm install —save react-router-dom
+npm install --save react-router-dom
 ```
 
 ## Usage
