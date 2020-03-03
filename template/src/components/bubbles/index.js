@@ -1,22 +1,29 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-const bubbleService = require('../../../server/services/bubbleService.js');
+import BubbleService from '../../../../server/services/bubbleService.js';
+import BubblesList from '../BubblesList/';
 
 // þetta virkar ekki, var að prófa mig áfram :)
 
 class Bubbles extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      bubbleID: "",
-      bubbles: [],
-      bubbleDetails: "",
-    }
+  componentDidMount() {
+    //console.log(BubbleService.getProducts());
+    this.setState({
+      bubbles: BubbleService.getProducts(),
+    });
   }
-
-  render(){
-
-    return (<div> Hello guys </div>)
+/*
+  state = {
+    bubbles: [],
+  };
+*/
+  render() {
+    //console.log(this.state);
+    return (
+      <div>
+        <h1> Bubbles</h1>
+        <BubblesList  bubbles={ this.state.bubbles }/>
+      </div>
+    );
   }
 }
 

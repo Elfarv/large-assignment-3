@@ -1,18 +1,28 @@
 import React from 'react';
 import {Switch, Route, Link, NavLink } from 'react-router-dom';
-//import Bubbles from './bubbles/index.js';
+import Bubbles from './Bubbles';
+import NavigationBar from './NavigationBar/';
+import Container from './Container';
 const bubbleService = require('../../../server/services/bubbleService.js');
 
 const App = () => {
+  /*
   let test = bubbleService.getProducts();
 
   console.log(bubbleService.getProducts()); //this is all the bubbles
   console.log(bubbleService.getBundles()); // these are all the bundles
   test.forEach(e => console.log(e.name));
+  */
     return (
-      <Switch>
 
-        //testa hvernig route virkar
+      //<Switch>
+      <div>
+        <NavigationBar />
+        <Container>
+          <Bubbles />
+        </Container>
+      </div>
+      /*  //testa hvernig route virkar
         <Route exact path='/' render={() => (
           <Link to='/Bubbles/1'>Go to Bubbles page </Link>
         )} />
@@ -25,6 +35,7 @@ const App = () => {
           </div>
         )} />
       </Switch>
+      */
     )
 };
 

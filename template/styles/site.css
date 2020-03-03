@@ -1,1 +1,20 @@
 /* You can add styles here */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul.nav-links li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+nav {
+  height: 50px;
+  background-color:red;
+}
