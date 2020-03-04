@@ -18,3 +18,23 @@ nav {
   height: 50px;
   background-color:red;
 }
+
+div.container {
+  display: flex;
+}
+
+div.bubbles-item {
+  display: flex;
+  flex-direction: row;
+  border-style: double;
+  border-color: black;
+}
+
+.bubbles-item > h3 {
+  font-size: 40px;
+}
+
+BubblesList {
+  display: flex;
+  border: red;
+}
