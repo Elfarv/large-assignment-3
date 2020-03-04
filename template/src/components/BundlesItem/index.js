@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BundlesItem = ({ name, item}) => {
+const BundlesItem = ({ name, item }) => {
   return(
     <div className='well bundles-item'>
       <h3> {name} </h3>
