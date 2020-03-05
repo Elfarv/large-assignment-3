@@ -16,19 +16,26 @@ const BubblesDetails = (props) => {
   const [bubblesDetails, setBubblesDetails] = useState(getBubbleId(props.match.params.bubblesItemId));
 
   const addToCart = () => {
-    console.log("add to cart");
+    alert("add to cart");
+  };
+
+  const goBack = () => {
+    console.log('trying to go back');
+    window.history.back()
   };
 
   return (
-    <div>
-      <NavigationBar />
-      <h1>{bubblesDetails.name}</h1>
-      <p>{bubblesDetails.description}</p>
-      <p>{bubblesDetails.price} ISK</p>
+    <>
+    <NavigationBar />
+    <div className="detailContainer">
+      <h1 className="heading">{bubblesDetails.name}</h1>
       <img src={bubblesDetails.image} alt="" />
+      <p className="detailDesc">{bubblesDetails.description}</p>
+      <p className="price">{bubblesDetails.price} ISK</p>
       <button onClick={addToCart}>Add to cart</button>
-      <button><Link to='/bubbles'>Go back</Link></button>
+      <button onClick={goBack} >Go back</button>
     </div>
+    </>
   )
 }
 

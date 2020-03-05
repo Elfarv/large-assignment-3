@@ -8,7 +8,6 @@ const Bundles = () => {
 
   useEffect(() => {
     setBundles(BubbleService.getBundles());
-    console.log(bundles);
   });
 
   return (

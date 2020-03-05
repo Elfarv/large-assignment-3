@@ -2,6 +2,10 @@ import React from 'react';
 import NavigationBar from '../NavigationBar';
 
 const About = () => {
+  const goBack = () => {
+    window.history.back()
+  };
+
   return (
     <>
     <NavigationBar />
@@ -12,7 +16,8 @@ const About = () => {
         We started out because we want to make sure that bubbles are accessible for every person on the planet.
         And we thought the best way was to create a website which ships all over the world.
         Make bubbles not war!</p>
-      </div>
+      <button className="aboutButton" onClick={goBack} >Go back</button>
+    </div>
     </>
   )
 }

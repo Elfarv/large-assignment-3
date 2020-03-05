@@ -5,14 +5,12 @@ import {Route, Redirect,Link} from 'react-router-dom';
 export const BubblesItem = ({ id, name, description, price, image }) => {
   //const [cart, setCart] = useContext(CartContext);
   const addToCart = () => {
-    console.log("add to cart");
+    alert("add to cart");
     //setCart(curr => [...curr, bubble]);
   };
 
   const productClicked = (e) => {
-    console.log("productClicked");
     const bubblesID = e.target.id;
-    console.log(bubblesID);
   };
 
   return (

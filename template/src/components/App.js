@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Link, NavLink } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 import Bubbles from "./Bubbles";
 import NavigationBar from "./NavigationBar/";
 import Container from "./Container";
@@ -9,12 +9,13 @@ import Cart from "./Cart";
 import { CartProvider } from "./CartContext";
 import BubblesDetails from "./BubblesDetails";
 import NotFound from "./NotFound";
-//const bubbleService = require('../../../server/services/bubbleService.js');
+import Homescreen from "./Homescreen";
+
 
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/" render={() => <NavigationBar />} />
+      <Route exact path="/" component={Homescreen}/>
       //BUBBLES ROUTE
       <Route exact path="/bubbles" component={Bubbles} />
       <Route exact path="/bubbles/:bubblesItemId" component={BubblesDetails} />
@@ -40,25 +41,5 @@ const App = () => {
     </Switch>
   );
 };
-
-/*
-
-return (
-    <>
-      <div>
-        <NavigationBar />
-      </div>
-      <div>
-        <Container>
-          <Bubbles/>
-        </Container>
-        <Container>
-          <Bundles/>
-        </Container>
-      </div>
-    </>
-)
-};
-*/
 
 export default App;

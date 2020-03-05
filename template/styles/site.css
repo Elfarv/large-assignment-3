@@ -32,6 +32,7 @@ div.bubbles-item {
   flex-basis: 250px;
   flex-grow: 1;
   box-shadow: -5px 5px 5px gray;
+  text-align: center;
 }
 
 h3.bubbles-item {
@@ -62,6 +63,7 @@ a.logo{
 
 a.logo:hover {
   text-decoration: none;
+  color: initial;
 }
 
 div.bundleContainer {
@@ -79,15 +81,55 @@ h3.bundleTitle {
 
 button.bundleButton {
   align-self: center;
-  margin: 20px;
+  padding: 20px;
 }
 
 div.aboutContainer {
   display: flex;
   flex-direction: column;
 }
+
+button.aboutButton {
+  align-self: center;
+  width: 30%;
+}
+
 p.aboutP {
   width: 50%;
   align-self: center;
   text-align: center;
+}
+
+div.detailContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p.detailDesc {
+  text-align: center;
+  width: 40%;
+}
+
+button.cartButton {
+  display: block;
+}
+
+div.homeContainer {
+  display:flex;
+  margin-top: 20%;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1.homeH1 {
+  color: red;
+}
+
+a.homeButton {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
 }
