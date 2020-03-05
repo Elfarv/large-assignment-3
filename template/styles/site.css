@@ -16,7 +16,7 @@ ul.nav-links li {
 
 nav {
   height: 50px;
-  background-color:red;
+  background-color: red;
 }
 
 div.container {
@@ -27,7 +27,7 @@ div.bubbles-item {
   display: flex;
   flex-direction: column;
   background-color: #dfe1e6;
-  margin:20px;
+  margin: 20px;
   align-items: center;
   flex-basis: 250px;
   flex-grow: 1;
@@ -42,22 +42,28 @@ h3.bubbles-item {
 p.desc {
   margin: 10px;
   align-self: center;
+  min-height: 70px;
 }
 
 h1.heading {
   text-align: center;
-  margin:20px;
+  margin: 20px;
 }
 
 div.bubbles-list {
   display: flex;
   flex-wrap: wrap;
 }
-p.price{
-color: blue;
+
+p.price {
+  color: blue;
 }
 
-a.logo{
+p.price+button {
+  margin-bottom: 10px;
+}
+
+a.logo {
   font-weight: bold;
 }
 
@@ -101,7 +107,7 @@ p.aboutP {
 }
 
 div.detailContainer {
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
@@ -116,7 +122,7 @@ button.cartButton {
 }
 
 div.homeContainer {
-  display:flex;
+  display: flex;
   margin-top: 20%;
   align-items: center;
   flex-direction: column;
