@@ -17,18 +17,15 @@ const BundlesList = ({ bundlesFromParent }) => {
 };
 
 function getBubblesItem(id) {
-  console.log(id);
     let bubbles = BubbleService.getProducts();
     let bubblesList = [];
     for(var i = 0; i < bubbles.length; i++){
       for(var j = 0; j < id.length; j++){
         if(bubbles[i].id == id[j]){
           bubblesList.push(bubbles[i]);
-          console.log(bubbles[i]);
         }
       }
     }
-    console.log(bubblesList);
     return ( <BubblesList bubblesFromParent={bubblesList} /> )
   };
 

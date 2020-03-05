@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NavLinks = () => (
     <ul className='nav-links'>
       <li>
-        <Link to='/bubbles'>Bubbles</Link>
+        <Link to='/bubbles'>Products</Link>
       </li>
       <li>
         <Link to='/bundles'>Bundles</Link>

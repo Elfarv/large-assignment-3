@@ -3,7 +3,7 @@ import BubblesItem from '../BubblesItem';
 
 const BubblesList = ({ bubblesFromParent }) => {
   return(
-    <div>
+    <div className="bubbles-list">
       { bubblesFromParent.map( n => <BubblesItem className='box'
         key={n.id}
         id={n.id}

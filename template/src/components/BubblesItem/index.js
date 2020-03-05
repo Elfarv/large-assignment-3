@@ -16,11 +16,11 @@ export const BubblesItem = ({ id, name, description, price, image }) => {
   };
 
   return (
-    <div id={`/${id}`} onClick={productClicked} className="well bubbles-item">
+    <div id={`/${id}`} onClick={productClicked} className="bubbles-item">
       <h3> <Link to={`/bubbles/${id}`}>{name} </Link> </h3>
-      <p> {description} </p>
-      <p> {price} ISK.</p>
       <img src={image} alt="" />
+      <p className="desc"> {description} </p>
+      <p className="price"> {price} ISK.</p>
       <button onClick={addToCart}>Add to cart</button>
     </div>
   );

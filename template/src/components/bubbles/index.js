@@ -13,7 +13,7 @@ const Bubbles = () => {
   return (
     <div>
       <NavigationBar />
-      <h1>Bubbles</h1>
+      <h1 className="heading">Bubbles</h1>
       <BubblesList bubblesFromParent={bubbles} />
     </div>
   )

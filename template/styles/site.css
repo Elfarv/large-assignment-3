@@ -24,15 +24,70 @@ div.container {
 }
 
 div.bubbles-item {
-  border-style: double;
-  border-color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: #dfe1e6;
+  margin:20px;
+  align-items: center;
+  flex-basis: 250px;
+  flex-grow: 1;
+  box-shadow: -5px 5px 5px gray;
 }
 
-.bubbles-item > h3 {
+h3.bubbles-item {
   font-size: 40px;
 }
 
-BubblesList {
+p.desc {
+  margin: 10px;
+  align-self: center;
+}
+
+h1.heading {
+  text-align: center;
+  margin:20px;
+}
+
+div.bubbles-list {
   display: flex;
-  border: red;
+  flex-wrap: wrap;
+}
+p.price{
+color: blue;
+}
+
+a.logo{
+  font-weight: bold;
+}
+
+a.logo:hover {
+  text-decoration: none;
+}
+
+div.bundleContainer {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: gray;
+  margin: 20px;
+  align-content: center;
+}
+
+h3.bundleTitle {
+  text-align: center;
+}
+
+button.bundleButton {
+  align-self: center;
+  margin: 20px;
+}
+
+div.aboutContainer {
+  display: flex;
+  flex-direction: column;
+}
+p.aboutP {
+  width: 50%;
+  align-self: center;
+  text-align: center;
 }

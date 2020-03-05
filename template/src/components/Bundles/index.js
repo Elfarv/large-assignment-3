@@ -14,7 +14,7 @@ const Bundles = () => {
   return (
     <div>
       <NavigationBar />
-      <h1>Bundles</h1>
+      <h1 className='heading'>Bundles</h1>
       <BundlesList bundlesFromParent={bundles} />
     </div>
   )

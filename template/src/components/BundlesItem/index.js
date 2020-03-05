@@ -1,12 +1,11 @@
 import React from 'react';
 
 const BundlesItem = ({ name, items }) => {
-  console.log('inside');
-  console.log(items); //undefined
   return(
-    <div className='well bundles-item'>
-      <h3> {name} </h3>
+    <div className='bundleContainer'>
+      <h3 className="bundleTitle"> {name} </h3>
       <div> {items} </div>
+      <button className="bundleButton"> Add bundle to cart</button>
     </div>
   )
 };
