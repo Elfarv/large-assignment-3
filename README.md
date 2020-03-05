@@ -8,6 +8,7 @@ Use the package manager [npm](https://www.npmjs.com/get-npm) to be able to run t
 ```bash
 npm install react-native
 npm install --save react-router-dom
+npm install redux react-redux
 ```
 
 ## Usage
