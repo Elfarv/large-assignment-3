@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { CartContext } from "../CartContext/index";
+import React from "react";
 import BubblesList from "../BubblesList";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const goBack = () => {
@@ -14,18 +14,23 @@ const Cart = () => {
     totalPrice += cartItem.price;
   });
   return (
-    <div>
-      <h1>Cart</h1>
-      <span>items in cart : {myCart.length}</span>
-      <br />
-      <span>total price: {totalPrice} </span>
+    <>
       <div>
-        <BubblesList bubblesFromParent={myCart} skipButton={true} />;
+        <h1>Cart</h1>
+        <span>items in cart : {myCart.length}</span>
+        <br />
+        <span>total price: {totalPrice} </span>
+        <div>
+          <BubblesList bubblesFromParent={myCart} skipButton={true} />
+        </div>
+        <button className="cartButton" onClick={goBack}>
+          Go back
+        </button>
+        <Link className="btn btn-primary" to="/cart/checkout">
+          Checkout
+        </Link>
       </div>
-      <button className="cartButton" onClick={goBack}>
-        Go back
-      </button>
-    </div>
+    </>
   );
 };
 

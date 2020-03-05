@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import { CartContext } from "../CartContext";
-import { Route, Redirect, Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const BubblesItem = ({
   id,
