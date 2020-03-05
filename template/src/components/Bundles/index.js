@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BubbleService from '../../../../server/services/bubbleService.js';
 import BundlesList from '../BundlesList/';
+import NavigationBar from '../NavigationBar';
 
 const Bundles = () => {
   const [bundles, setBundles ] = useState([]);
@@ -12,6 +13,7 @@ const Bundles = () => {
 
   return (
     <div>
+      <NavigationBar />
       <h1>Bundles</h1>
       <BundlesList bundlesFromParent={bundles} />
     </div>

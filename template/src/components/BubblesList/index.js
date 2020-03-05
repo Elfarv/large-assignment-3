@@ -4,9 +4,11 @@ import BubblesItem from '../BubblesItem';
 const BubblesList = ({ bubblesFromParent }) => {
   return(
     <div>
-      { bubblesFromParent.map( n => <BubblesItem
+      { bubblesFromParent.map( n => <BubblesItem className='box'
         key={n.id}
+        id={n.id}
         name={n.name}
+        price={n.price}
         description={n.description}
         image={n.image}
         />) }

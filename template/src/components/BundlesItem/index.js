@@ -1,10 +1,12 @@
 import React from 'react';
 
-const BundlesItem = ({ name, item }) => {
+const BundlesItem = ({ name, items }) => {
+  console.log('inside');
+  console.log(items); //undefined
   return(
     <div className='well bundles-item'>
       <h3> {name} </h3>
-      <p> {item} </p>
+      <div> {items} </div>
     </div>
   )
 };

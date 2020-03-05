@@ -7,6 +7,7 @@ import Bundles from "./Bundles";
 import About from "./About";
 import Cart from "./Cart";
 import { CartProvider } from "./CartContext";
+import BubblesDetails from "./BubblesDetails";
 //const bubbleService = require('../../../server/services/bubbleService.js');
 
 const App = () => {
@@ -14,44 +15,12 @@ const App = () => {
     <Switch>
       <Route exact path="/" render={() => <NavigationBar />} />
       //BUBBLES ROUTE
-      <Route
-        exact
-        path="/bubbles"
-        render={() => (
-          <div>
-            <NavigationBar />
-            <Container>
-              <Bubbles />
-            </Container>
-          </div>
-        )}
-      />
+      <Route exact path="/bubbles" component={Bubbles} />
+      <Route exact path="/bubbles/:bubblesItemId" component={BubblesDetails} />
       //BUNDLES ROUTE
-      <Route
-        exact
-        path="/bundles"
-        render={() => (
-          <div>
-            <NavigationBar />
-            <Container>
-              <Bundles />
-            </Container>
-          </div>
-        )}
-      />
-      //ABOUT US ROTUE
-      <Route
-        exact
-        path="/about"
-        render={() => (
-          <div>
-            <NavigationBar />
-            <Container>
-              <About />
-            </Container>
-          </div>
-        )}
-      />
+      <Route exact path="/bundles" component={Bundles} />
+    //ABOUT US ROTUE
+      <Route path="/about" component={About} />
       <Route
         exact
         path="/cart"
@@ -66,10 +35,7 @@ const App = () => {
           </div>
         )}
       />
-      <Route
-        path="/bubbles/1"
-        render={id => <p>Welcome to bubbles page 1</p>}
-      />
+    /*
       <Route
         render={({ location }) => (
           <div>
@@ -78,7 +44,7 @@ const App = () => {
             <div> {location.pathname} was not found! </div>
           </div>
         )}
-      />
+      />*/
     </Switch>
   );
 };

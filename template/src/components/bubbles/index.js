@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BubbleService from '../../../../server/services/bubbleService.js';
 import BubblesList from '../BubblesList/';
+import NavigationBar from '../NavigationBar';
 
 const Bubbles = () => {
   const [bubbles, setBubbles ] = useState([]);
@@ -11,6 +12,7 @@ const Bubbles = () => {
 
   return (
     <div>
+      <NavigationBar />
       <h1>Bubbles</h1>
       <BubblesList bubblesFromParent={bubbles} />
     </div>
