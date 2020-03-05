@@ -17,7 +17,7 @@ export const BubblesItem = ({ id, name, description, price, image }) => {
 
   return (
     <div id={`/${id}`} onClick={productClicked} className="well bubbles-item">
-      <h3> <Link to={`/${id}`}>{name} </Link> </h3>
+      <h3> <Link to={`/bubbles/${id}`}>{name} </Link> </h3>
       <p> {description} </p>
       <p> {price} ISK.</p>
       <img src={image} alt="" />

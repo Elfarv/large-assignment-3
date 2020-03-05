@@ -8,6 +8,7 @@ import About from "./About";
 import Cart from "./Cart";
 import { CartProvider } from "./CartContext";
 import BubblesDetails from "./BubblesDetails";
+import NotFound from "./NotFound";
 //const bubbleService = require('../../../server/services/bubbleService.js');
 
 const App = () => {
@@ -35,16 +36,7 @@ const App = () => {
           </div>
         )}
       />
-    /*
-      <Route
-        render={({ location }) => (
-          <div>
-            <NavigationBar />
-            <div>404!</div>
-            <div> {location.pathname} was not found! </div>
-          </div>
-        )}
-      />*/
+    <Route path='*' component={NotFound} />
     </Switch>
   );
 };
